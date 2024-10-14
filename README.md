@@ -36,9 +36,16 @@ The app takes image of nuts & bolts with paint marks on it to check if the bolts
 - View: Contains Screens.
 
 ### Time Taken for this Project
-- Figuring Tools to Use = 6 hrs
-- Learning & Exploring ML Object Detection (From Scratch) = 6 hrs
-- Learning & Exploring Image Processing Using OpenCV, MatPlotlib, PIL (From Scratch) = 8 hrs
+- Figuring Tools to Use = 6 
+
+
+hrs
+- Learning & Exploring ML Object Detection (Learned From Scratch) = 6 hrs
+- Learning & Exploring Image Processing Using OpenCV, MatPlotlib, PIL (Learned From Scratch) = 8 hrs
 - Developing Backend APIs using Pyton, FastAPI = 8 hrs
 - Developing Frontend for IOS using Dart, Flutter = 8 hrs
 - Total = 36 Hours
+
+## Demo Video
+
+https://github.com/user-attachments/assets/9a86891f-4862-43df-8964-93f57fcf6616
