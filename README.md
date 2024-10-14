@@ -35,3 +35,12 @@ The app takes image of nuts & bolts with paint marks on it to check if the bolts
 - Model: DataModel which should be in sync with the model present in Backend Apis
 - View: Contains Screens.
 
+### Time Taken for this Project
+- Figuring Tools to Use = 6 hrs
+- Learning & Exploring ML Object Detection (From Scratch) = 6 hrs
+- Learning & Exploring Image Processing Using OpenCV, MatPlotlib, PIL (From Scratch) = 8 hrs
+- Developing Backend APIs using Pyton, FastAPI = 8 hrs
+- Developing Frontend for IOS using Dart, Flutter = 8 hrs
+- Total = 36 Hours
+
+

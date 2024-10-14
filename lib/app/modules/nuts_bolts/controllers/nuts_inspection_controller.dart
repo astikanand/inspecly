@@ -51,7 +51,6 @@ class NutsInspectionController extends GetxController {
         Get.snackbar("Image Upload Failed", "Error Occurred while Uploading the image");
       } else {
         imageBytes.value = inspectionResult!.processedImage!.imageData!;
-        Get.snackbar("Inspection Success", "Inspection Result showing soon");
       }
     }
   }

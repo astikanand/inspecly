@@ -53,7 +53,7 @@ class InspectionScreen extends StatelessWidget {
           const SizedBox(height: 20),
 
           Obx(() => nutsController.imageProcessing.value?
-          CustomShimmerContainerBox(height: getProportionateScreenHeight(150)):
+          CustomShimmerContainerBox(height: getProportionateScreenHeight(100)):
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -78,7 +78,7 @@ class InspectionScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 Text(
-                  "Total Detected Nuts: ${nutsController.inspectionResult!.nonMarkedNuts}",
+                  "Non-Marked Nuts: ${nutsController.inspectionResult!.nonMarkedNuts}",
                   style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
               ],
