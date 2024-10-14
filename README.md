@@ -1,16 +1,37 @@
-# inspecly
+# Inspecly
+Inspecly is an app that practically acts as a Co-Pilot for the inspection.
+The app takes image of nuts & bolts with paint marks on it to check if the bolts are tightening/missed. It processes the image and gives the output after inspection marking of its alignment.
 
-A new Flutter project.
 
-## Getting Started
+### Features
+- Takes image as input and performs object detection to detect nuts & bolts in image
+- On the detected image checks for white paint marks and applies logic to decide alignment
+- Saves the original image, and inspection image along with inspection details in the DB.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+### APIs
+- Check APIs & Documentatioin for it at [https://github.com/astikanand/inspecly_backend](https://github.com/astikanand/inspecly_backend)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Prerquisites for Frontend App
+- Dart 
+- Flutter (Framework for the App)
+- Obx (For Observables, and Dynamity)
+
+
+### Getting started
+1. Install Flutter
+2. Setup IOS / Android Physical Device or Emulator to run and Test.
+3. Run `flutter pub get` to install required dependencies for the project from `pubspec.yaml`
+4. Run `flutter pub run build_runner build` to generate some requited files
+5. Run the app using `flutter run`
+
+
+### Directory Structure
+- lib # All the code files are present here
+- app # contains config & modules (2 Modules are home, nuts_bolts)
+- Each Module has controller, model, view
+- Controller: All the core logic
+- Model: DataModel which should be in sync with the model present in Backend Apis
+- View: Contains Screens.
+
