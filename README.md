@@ -43,4 +43,6 @@ The app takes image of nuts & bolts with paint marks on it to check if the bolts
 - Developing Frontend for IOS using Dart, Flutter = 8 hrs
 - Total = 36 Hours
 
+### Demo Video
+https://github.com/user-attachments/assets/e455b628-04ac-4e50-9fa3-637ce8035248
 
