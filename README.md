@@ -10,7 +10,7 @@ The app takes image of nuts & bolts with paint marks on it to check if the bolts
 
 
 ### APIs
-- Check APIs & Documentatioin for it at [https://github.com/astikanand/inspecly_backend](https://github.com/astikanand/inspecly_backend)
+- Check APIs & Documentation for it at [https://github.com/astikanand/inspecly_backend](https://github.com/astikanand/inspecly_backend)
 
 
 ### Prerquisites for Frontend App
