@@ -23,17 +23,17 @@ The app takes image of nuts & bolts with paint marks on it to check if the bolts
 1. Install Flutter
 2. Setup IOS / Android Physical Device or Emulator to run and Test.
 3. Run `flutter pub get` to install required dependencies for the project from `pubspec.yaml`
-4. Run `flutter pub run build_runner build` to generate some requited files
+4. Run `flutter pub run build_runner build` to generate some required files
 5. Run the app using `flutter run`
 
 
 ### Directory Structure
 - lib # All the code files are present here
 - app # contains config & modules (2 Modules are home, nuts_bolts)
-- Each Module has controller, model, view
-- Controller: All the core logic
-- Model: DataModel which should be in sync with the model present in Backend Apis
-- View: Contains Screens.
+- Each Module has controller, model, view.
+  - Controller: All the core logic
+  - Model: DataModel which should be in sync with the model present in Backend Apis
+  - View: Contains Screens/Pages
 
 ### Time Taken for this Project
 - Figuring Tools to Use = 6 hrs
