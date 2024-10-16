@@ -45,4 +45,5 @@ The app takes image of nuts & bolts with paint marks on it to check if the bolts
 
 ## Demo Video
 
-https://github.com/user-attachments/assets/9a86891f-4862-43df-8964-93f57fcf6616
+https://github.com/user-attachments/assets/c472200a-4c00-4315-9c98-eb67c3232041
+
