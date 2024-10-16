@@ -27,7 +27,7 @@ class HomeController extends GetxController {
         if(mimeType != null && mimeType.isNotEmpty && allowedExtensions.contains(fileExtension)){
           selectedImagePath = pickedImage.path;
         } else {
-          errorMessage = "Only supports image formats: ${allowedExtensions.join('/')}";
+          errorMessage = "$fileExtension NOT Suppported. Only supports image formats: ${allowedExtensions.join('/')}";
         }
       } else {
         errorMessage = "No Image Selected";
@@ -38,7 +38,7 @@ class HomeController extends GetxController {
     } finally {
       if (errorMessage.isNotEmpty) {
         logger.i("Error!: $errorMessage");
-        Get.snackbar("Error!: $errorMessage", "Please pick the image again", snackPosition: SnackPosition.BOTTOM, backgroundColor: Colors.deepPurpleAccent.shade200, colorText: Colors.white);
+        Get.snackbar("Error!! Please pick the image again", errorMessage, snackPosition: SnackPosition.BOTTOM, backgroundColor: Colors.deepPurpleAccent.shade200, colorText: Colors.white);
       } else {
         nutsController.imageProcessing.value = true;
         Get.to(() =>InspectionScreen(selectedImagePath: selectedImagePath));
