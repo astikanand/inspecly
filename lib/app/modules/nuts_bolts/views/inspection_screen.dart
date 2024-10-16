@@ -36,15 +36,20 @@ class InspectionScreen extends StatelessWidget {
 
           const Text('Processed Image', style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
           const SizedBox(height: 10),
-          Obx(() => nutsController.imageProcessing.value
-              ? CustomShimmerContainerBox(
+          Obx(() => nutsController.imageProcessing.value?
+              CustomShimmerContainerBox(
                   height: getProportionateScreenHeight(250))
-              : Image.memory(
+              : nutsController.inspectionResult != null? 
+              Image.memory(
                   const Base64Decoder()
                       .convert(nutsController.imageBytes.value),
                   width: double.infinity,
                   fit: BoxFit.cover,
-                )),
+              ):
+              const Text(
+                "Error Occurred!! Couldn't Process the image. Please Try again",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)
+              )),
           const SizedBox(height: 10),
           const Divider(thickness: 2),
           const SizedBox(height: 10),
@@ -54,6 +59,7 @@ class InspectionScreen extends StatelessWidget {
 
           Obx(() => nutsController.imageProcessing.value?
           CustomShimmerContainerBox(height: getProportionateScreenHeight(100)):
+          nutsController.inspectionResult != null?
           Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -84,6 +90,10 @@ class InspectionScreen extends StatelessWidget {
               ],
             ),
           ],
+        ) :
+        const Text(
+                "Error Occurred!! Analysis not available",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)
         )),
 
         SizedBox(height: getProportionateScreenHeight(50)),

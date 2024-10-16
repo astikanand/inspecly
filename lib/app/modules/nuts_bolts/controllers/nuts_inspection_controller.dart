@@ -1,10 +1,12 @@
 import "dart:convert";
+import "package:flutter/material.dart";
 import "package:get/get.dart";
 import "package:http/http.dart" as http;
 import "package:http_parser/http_parser.dart";
 import "package:inspecly/app/config/site_config.dart";
 import "package:inspecly/app/modules/nuts_bolts/models/inspection_model.dart";
 import "package:inspecly/app/modules/utils/custom_logger.dart";
+import 'package:path/path.dart' as path;
 
 
 class NutsInspectionController extends GetxController {
@@ -20,13 +22,15 @@ class NutsInspectionController extends GetxController {
       if (selectedImagePath.isNotEmpty) {
         var apiUrl = "${SiteConfig.apiBaseURL}/inspections/create-inspection";
         var request = http.MultipartRequest("POST", Uri.parse(apiUrl));
+        String filename = path.basename(selectedImagePath);
+        var fileType = filename.split(".").last;
         
         request.files.add(
           await http.MultipartFile.fromPath(
             "file", 
             selectedImagePath,
-            filename: selectedImagePath.split("/").last,
-            contentType: MediaType("image", "png")
+            filename: filename,
+            contentType: MediaType("image", fileType)
         ));
 
         final response = await request.send();
@@ -42,13 +46,14 @@ class NutsInspectionController extends GetxController {
         errorMessage = "Please select an image first";
       }
     } on Exception catch (e) {
-      logger.e("Exception occurred while uploading image in inspection controller: $e");
-      errorMessage = "Exception occurred while uploading image in inspection controller";
+      errorMessage = "Exception occurred while uploading image";
+      logger.e("$errorMessage: $e");
+      errorMessage = "Exception occurred while uploading image";
     } finally {
       imageProcessing.value = false;
       if (errorMessage.isNotEmpty) {
         logger.i("Error!: $errorMessage");
-        Get.snackbar("Image Upload Failed", "Error Occurred while Uploading the image");
+        Get.snackbar("Image Upload Failed", "Error Occurred while Uploading the image", snackPosition: SnackPosition.BOTTOM, backgroundColor: Colors.deepPurpleAccent.shade200, colorText: Colors.white);
       } else {
         imageBytes.value = inspectionResult!.processedImage!.imageData!;
       }
